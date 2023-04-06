@@ -1,38 +1,72 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #212121;
+  color: #ffffff;
+  overflow: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App main {
+  margin-top: 25vh;
+  margin-left: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App main h1 {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 8rem;
+  line-height: 9rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App main h1::before {
+  position: absolute;
+  top: -60px;
+  content: "<h1>";
+  font-family: "Single Day", cursive;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #515152;
 }
 
-.App-link {
-  color: #61dafb;
+.App main h1::after {
+  position: absolute;
+  right: -70px;
+  bottom: -30px;
+  content: "</h1>";
+  font-family: "Single Day", cursive;
+  color: #515152;
+  font-size: 1.8rem;
+  font-weight: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App main .FrontendDeveloper {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 1.6em;
+  letter-spacing: 4px;
+  color: #8D8D8D;
+}
+
+.App main p.FrontendDeveloper::before {
+  content: "<p>";
+  font-family: "Single Day", cursive;
+  color: #515152;
+  font-size: 1.8rem;
+  position: absolute;
+  top: -25px;
+  left: -18px;
+}
+
+.App main p.FrontendDeveloper::after {
+  content: "</p>";
+  font-family: "Single Day", cursive;
+  color: #515152;
+  font-size: 1.8rem;
+  position: absolute;
+  left: -18px;
+  bottom: -25px;
 }
