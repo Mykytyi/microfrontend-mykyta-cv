@@ -10,6 +10,9 @@ function App() {
 
   return (
     <div className="App">
+      <footer>
+        <span/>
+      </footer>
       <main>
         <h1 className="FontWeightNormal">
           {firstRow.map((char) => {
