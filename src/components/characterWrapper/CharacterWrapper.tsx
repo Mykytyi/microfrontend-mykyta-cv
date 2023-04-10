@@ -11,7 +11,6 @@ const CharacterWrapper: FC<Props> = ({ char }) => {
   const [classArray, setClassArray] = useState(['Char']);
 
   const animationHandler = () => {
-    console.log('Gotch ya');
     setClassArray(['Char', 'animated', 'rubberBand']);
     setTimeout(() => {
       setClassArray(['Char']);

@@ -3,6 +3,12 @@ html {
   background: #212121;
 }
 
+#canvasAnim {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   background: #212121;
