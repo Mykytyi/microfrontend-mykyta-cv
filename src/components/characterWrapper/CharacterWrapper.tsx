@@ -11,6 +11,7 @@ const CharacterWrapper: FC<Props> = ({ char }) => {
   const [classArray, setClassArray] = useState(['Char']);
 
   const animationHandler = () => {
+    console.log('Gotch ya');
     setClassArray(['Char', 'animated', 'rubberBand']);
     setTimeout(() => {
       setClassArray(['Char']);
@@ -23,6 +24,9 @@ const CharacterWrapper: FC<Props> = ({ char }) => {
   if (char === 'M') {
     return <img alt="Mykyta" src={logo} width={73} height={75} className="Char-logo"/>;
   }
-  return <span className={classArray.join(' ')} onMouseOver={animationHandler}>{char}</span>;
+  return <span
+    className={classArray.join(' ')}
+    onMouseOver={animationHandler}
+  >{char}</span>;
 }
 export default CharacterWrapper;
