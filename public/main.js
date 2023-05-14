@@ -4,7 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let spots = [];
-let hue = 50;
+let hue = Math.random() < 0.5 ? 'hsl(209, 100%, 49%)' : 'hsl(53, 88%, 52%)';
 
 const mouse = {
 	x: undefined,
@@ -18,13 +18,13 @@ class Particle {
 		this.size = Math.random() * 2 + 0.1;
 		this.speedX = Math.random() * 2 - 1;
 		this.speedY = Math.random() * 2 - 1;
-		this.color = `hsl(${hue}, 100%, 50%)`;
+		this.color = hue;
 	}
 
 	update() {
 		this.x += this.speedX;
 		this.y += this.speedY;
-		if (this.size > 0.1) this.size -= 0.03;
+		if (this.size > 0.1) this.size -= 0.009;
 	}
 
 	draw() {
@@ -38,7 +38,7 @@ class Particle {
 canvas.addEventListener('mousemove', (event) => {
 	mouse.x = event.x;
 	mouse.y = event.y;
-	for (let i = 0; i < 3; i++) {
+	for (let i = 0; i < 2; i++) {
 		spots.push(new Particle());
 	}
 });
@@ -52,7 +52,7 @@ function handleParticle() {
 			const dx = spots[i].x - spots[j].x;
 			const dy = spots[i].y - spots[j].y;
 			const distance = Math.sqrt(dx * dx + dy * dy);
-			if (distance < 90) {
+			if (distance > 10 && distance < 35) {
 				ctx.beginPath();
 				ctx.strokeStyle = spots[i].color;
 				ctx.lineWidth = spots[i].size / 10;
@@ -62,7 +62,7 @@ function handleParticle() {
 			}
 		}
 
-		if (spots[i].size <= 0.3) {
+		if (spots[i].size <= 0.1) {
 			spots.splice(i, 1);
 			i--;
 		}
@@ -72,14 +72,6 @@ function handleParticle() {
 function animate() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	handleParticle();
-	console.log('Hue: ', hue);
-	if (hue >= 65 && hue < 200) {
-		hue = 200;
-	} else if (hue >= 215) {
-		hue = 50;
-	} else {
-		hue = hue + 1;
-	}
 	requestAnimationFrame(animate);
 }
 
