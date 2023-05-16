@@ -35,13 +35,21 @@ class Particle {
 	}
 }
 
-canvas.addEventListener('mousemove', (event) => {
-	mouse.x = event.x;
+document.body.addEventListener('mousemove', (event) => {
+	mouse.x = event.x + 140;
 	mouse.y = event.y;
-	for (let i = 0; i < 2; i++) {
+	for (let i = 0; i < 3; i++) {
 		spots.push(new Particle());
 	}
 });
+
+document.body.addEventListener('click', (event) => {
+	console.log('event: ', event);
+	console.log('target: ', event.target);
+	console.log('currentTarget: ', event.currentTarget);
+	console.log('body.contains(event.target): ', body.contains(event.target));
+});
+
 
 function handleParticle() {
 	for (let i = 0; i < spots.length; i++) {
@@ -52,7 +60,7 @@ function handleParticle() {
 			const dx = spots[i].x - spots[j].x;
 			const dy = spots[i].y - spots[j].y;
 			const distance = Math.sqrt(dx * dx + dy * dy);
-			if (distance > 10 && distance < 35) {
+			if (distance > 10 && distance < 45) {
 				ctx.beginPath();
 				ctx.strokeStyle = spots[i].color;
 				ctx.lineWidth = spots[i].size / 10;
