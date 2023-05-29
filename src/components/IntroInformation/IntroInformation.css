@@ -1,0 +1,87 @@
+.IntroInformation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.IntroInformation .TextBlock .Wrapper h2 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 7rem;
+  margin-left: -0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 6rem;
+  color: #2FB4FF;
+  white-space: nowrap;
+}
+
+.IntroInformation .TextBlock .Wrapper h2::before {
+  position: absolute;
+  top: -3rem;
+  left: -1.3rem;
+  content: "<h2>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.IntroInformation .TextBlock .Wrapper h2::after {
+  position: absolute;
+  bottom: -3rem;
+  left: -1.3rem;
+  content: "</h2>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.IntroInformation .TextBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.IntroInformation .TextBlock .Wrapper p {
+  position: relative;
+  font-size: 2rem;
+}
+
+.IntroInformation .TextBlock .Wrapper p::before {
+  position: absolute;
+  top: -3rem;
+  left: -1.8rem;
+  content: "<p>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.IntroInformation .TextBlock .Wrapper p::after {
+  position: absolute;
+  bottom: -3rem;
+  left: -1.8rem;
+  content: "</p>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.IntroInformation .TextBlock .Wrapper {
+}
+
+.IntroInformation .SphereBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}

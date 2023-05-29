@@ -1,4 +1,5 @@
 import WelcomePage from '../welcomePage/WelcomePage';
+import IntroInformation from '../IntroInformation/IntroInformation';
 
 import './App.css';
 
@@ -12,6 +13,7 @@ function App() {
 
       <main>
         <WelcomePage/>
+        <IntroInformation/>
       </main>
 
       <footer>
