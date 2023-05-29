@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import logo from '../../logo-512x512.png';
+import logo from '../../../logo-512x512.png';
 
 import './CharacterWrapper.css';
 
@@ -21,7 +21,7 @@ const CharacterWrapper: FC<Props> = ({ char }) => {
     return <>&nbsp;</>;
   }
   if (char === 'M') {
-    return <img alt="Mykyta" src={logo} width={73} height={75} className="Char-logo"/>;
+    return <img alt="Mykyta" src={logo} className="Char-logo"/>;
   }
   return <span
     className={classArray.join(' ')}
