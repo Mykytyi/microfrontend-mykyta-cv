@@ -1,0 +1,14 @@
+.Sphere {
+
+}
+
+.Sphere .CustomContainerStyle {
+
+}
+
+.Sphere .CustomItemStyle {
+  font-size: 2.4rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #2FB4FF;
+}
