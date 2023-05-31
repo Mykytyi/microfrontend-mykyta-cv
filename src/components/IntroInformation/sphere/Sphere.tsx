@@ -5,9 +5,9 @@ import './Sphere.css';
 
 const labels = [
   'Node.js', 'Jenkins', 'HTML5', 'React',
-  'ES5/ES6', 'Atlassian', 'JS', 'CSS3',
+  'ES5/ES6', 'Atlassian', 'Babel', 'JS', 'CSS3',
   'Animations', 'MongoDB', 'CI/CD', 'Git',
-  'SQL', 'REST API'];
+  'SQL', 'REST API', 'Webpack', 'Typescript'];
 
 const Sphere = React.memo(() => {
 
@@ -16,7 +16,7 @@ const Sphere = React.memo(() => {
     if (!element?.innerHTML) {
       const container = '.tagcloud';
       const options = {
-        radius: 250,
+        radius: 350,
         maxSpeed: 'normal',
         keep: true,
         containerClass: 'CustomContainerStyle',

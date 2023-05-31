@@ -1,5 +1,6 @@
 import WelcomePage from '../welcomePage/WelcomePage';
 import IntroInformation from '../IntroInformation/IntroInformation';
+import Portfolio from '../portfolio/Portfolio';
 
 import './App.css';
 
@@ -14,6 +15,7 @@ function App() {
       <main>
         <WelcomePage/>
         <IntroInformation/>
+        <Portfolio/>
       </main>
 
       <footer>
