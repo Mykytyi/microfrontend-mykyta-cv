@@ -43,13 +43,6 @@ document.body.addEventListener('mousemove', (event) => {
 	}
 });
 
-document.body.addEventListener('click', (event) => {
-	console.log('event: ', event);
-	console.log('target: ', event.target);
-	console.log('currentTarget: ', event.currentTarget);
-	console.log('body.contains(event.target): ', body.contains(event.target));
-});
-
 
 function handleParticle() {
 	for (let i = 0; i < spots.length; i++) {
