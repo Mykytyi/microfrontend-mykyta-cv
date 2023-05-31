@@ -1,0 +1,248 @@
+
+.Portfolio {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 10rem;
+}
+
+.Portfolio::before {
+  position: absolute;
+  top: 80rem;
+  right: 20%;
+  content: "Work";
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 50rem;
+  color: rgba(163, 163, 163, .03);
+  transform: rotate(270deg);
+}
+
+.Portfolio .TextBlock {
+  max-width: 65rem;
+  margin-bottom: 15rem;
+  padding: 0 10%;
+}
+
+.Portfolio .TextBlock h2 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 7rem;
+  margin-left: -0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 5.4rem;
+  color: #2FB4FF;
+  white-space: nowrap;
+}
+
+.Portfolio .TextBlock h2::before {
+  position: absolute;
+  top: -3rem;
+  left: -1.3rem;
+  content: "<h2>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.Portfolio .TextBlock h2::after {
+  position: absolute;
+  bottom: -3rem;
+  left: -1.3rem;
+  content: "</h2>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.Portfolio .TextBlock p {
+  position: relative;
+  font-size: 2rem;
+}
+
+.Portfolio .TextBlock p::before {
+  position: absolute;
+  top: -3rem;
+  left: -1.8rem;
+  content: "<p>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.Portfolio .TextBlock p::after {
+  position: absolute;
+  bottom: -3rem;
+  left: -1.8rem;
+  content: "</p>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.Portfolio .Project {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10%;
+  margin-bottom: 22rem;
+}
+
+.Portfolio .Project.A1Block {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  padding-right: 10%;
+}
+
+.Portfolio .Project.A1Block {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  padding-right: 10%;
+}
+
+.Portfolio .Project.A1Block .Slides {
+  margin-right: 5rem;
+}
+
+.Portfolio .Project .ProjectDescription {
+  width: 40%;
+}
+
+.Portfolio .Project .ProjectDescription .CompanyLogo {
+  display: inline-block;
+  margin-bottom: 5rem;
+}
+
+.Portfolio .Project .ProjectDescription .CompanyLogo.A1LogoWrapper img {
+  width: 12rem;
+}
+
+.Portfolio .Project .ProjectDescription .CompanyLogo.GoodlikeLogoWrapper img {
+  width: 30rem;
+}
+
+
+.Portfolio .Project .ProjectDescription .Wrapper p {
+  position: relative;
+  font-size: 2rem;
+}
+
+.Portfolio .Project .ProjectDescription .Wrapper p::before {
+  position: absolute;
+  top: -3rem;
+  left: -1.8rem;
+  content: "<p>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.Portfolio .Project .ProjectDescription .Wrapper p::after {
+  position: absolute;
+  bottom: -3rem;
+  left: -1.8rem;
+  content: "</p>";
+  font-family: "Single Day", cursive;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #515152;
+}
+
+.Portfolio .Project .Slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.Portfolio .Project .Slides .Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  height: 30rem;
+}
+
+.Portfolio .Project .Slides .ImageWrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.Portfolio .Project .Slides .ImageWrapper .Button {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  transform: translate(-50%, -50%) scale(0);
+  top: 50%;
+  left: 50%;
+  background-color: #2FB4FF;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  border-radius: 5rem;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: all .2s ease-out;
+  cursor: pointer;
+}
+
+.Portfolio .Project .Slides .ImageWrapper:hover .Button {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.Portfolio .Project .Slides .ImageWrapper img {
+  height: auto;
+  transition: all .2s linear;
+}
+
+.Portfolio .Project .Slides .ImageWrapper:hover > img {
+  filter: brightness(70%);
+  transform: scale(1.1);
+}
+
+.Portfolio .Project .Slides .AdditionalImage {
+  display: inline-block;
+  position: absolute;
+  overflow: auto;
+}
+
+.Portfolio .Project .Slides .ImageWrapper.MainPicture {
+  z-index: 5;
+}
+
+.Portfolio .Project .Slides .ImageWrapper .SecondPicture {
+  top: 10%;
+  left: -10rem;
+  z-index: -1;
+}
+
+.Portfolio .Project.A1Block .Slides .ImageWrapper .ThirdPicture {
+  top: 15%;
+}
+
+.Portfolio .Project .Slides .ImageWrapper .SecondPicture img {
+  width: 35rem;
+  filter: brightness(70%);
+}
+
+.Portfolio .Project .Slides .ImageWrapper .ThirdPicture {
+  top: 10%;
+  right: -10rem;
+  z-index: -1;
+}
+
+.Portfolio .Project .Slides .ImageWrapper .ThirdPicture img {
+  width: 35rem;
+  filter: brightness(70%);
+}
+
+.Portfolio .Project .Slides .ImageWrapper img {
+  width: 45rem;
+}
