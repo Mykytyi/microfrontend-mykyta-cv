@@ -194,7 +194,7 @@
 }
 
 .Portfolio .Project .Slides .ImageWrapper:hover .Button {
-  transform: translate(-50%, -50%) scale(1);
+  /* TODO: return while "View more" buttons implementing transform: translate(-50%, -50%) scale(1); */
 }
 
 .Portfolio .Project .Slides .ImageWrapper img {
@@ -202,8 +202,8 @@
   transition: all .2s linear;
 }
 
-.Portfolio .Project .Slides .ImageWrapper:hover > img {
-  filter: brightness(70%);
+.Portfolio .Project .Slides .ImageWrapper > img:hover {
+  /* TODO: return while "View more" buttons implementing filter: brightness(70%); */
   transform: scale(1.1);
 }
 
@@ -211,6 +211,7 @@
   display: inline-block;
   position: absolute;
   overflow: auto;
+  transition: all .2s linear;
 }
 
 .Portfolio .Project .Slides .ImageWrapper.MainPicture {

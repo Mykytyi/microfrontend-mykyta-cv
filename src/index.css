@@ -1,6 +1,7 @@
 html {
   font-size: 9px;
   background: #212121;
+  scroll-behavior: smooth;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -20,6 +21,7 @@ time, mark, audio, video, p {
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  list-style-type: none;
 }
 
 #canvasAnim {

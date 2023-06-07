@@ -4,7 +4,7 @@ import './IntroInformation.css';
 
 const IntroInformation = () => {
   return (
-    <div className="IntroInformation">
+    <div className="IntroInformation" id="contactMe">
       <div className="TextBlock">
         <div className="Wrapper">
           <h2>Me, Myself and I</h2>
