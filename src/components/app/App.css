@@ -25,6 +25,30 @@ header span::after {
   left: 7.5rem;
 }
 
+footer {
+  position: relative;
+}
+
+footer::before {
+  content: "</html>";
+  font-family: "Single Day", cursive;
+  color: #515152;
+  font-size: 2.4rem;
+  position: absolute;
+  top: -5rem;
+  left: 5rem;
+}
+
+footer::after {
+  content: "</body>";
+  font-family: "Single Day", cursive;
+  color: #515152;
+  font-size: 2.4rem;
+  position: absolute;
+  top: -8rem;
+  left: 7.5rem;
+}
+
 /*footer span::after {*/
 /*  content: "</body>";*/
 /*  font-family: "Single Day", cursive;*/
