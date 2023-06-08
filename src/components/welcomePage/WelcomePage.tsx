@@ -26,7 +26,7 @@ const WelcomePage = () => {
         <p className="FrontendDeveloper">
           Front End developer / React expert
         </p>
-        <button className="Button">Contact me!</button>
+        {/* TODO work around it, maybe with a new "Contact me" page <button className="Button">Contact me!</button>*/}
       </div>
 
       <div className="AdditionalElements">
