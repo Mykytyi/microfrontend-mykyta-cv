@@ -1,0 +1,58 @@
+.InputFieldContainer {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.InputFieldContainer input,
+.InputFieldContainer textarea  {
+  position: relative;
+  width: 100%;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  min-height: 6rem;
+  color: #ABABAB;
+  background-color: #2b2b2b;
+  border: none;
+  box-sizing: border-box;
+}
+
+.InputFieldContainer input + label:before,
+.InputFieldContainer textarea + label:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #2FB4FF;
+  transform: translateX(-101%);
+  transition: all 0.3s ease-out;
+}
+
+.InputFieldContainer.error input + label:before,
+.InputFieldContainer.error textarea + label:before {
+  border-bottom: 2px solid red;
+}
+
+.InputFieldContainer input:focus + label:before,
+.InputFieldContainer textarea:focus + label:before {
+  transform: translateX(0%);
+}
+
+
+.InputFieldContainer textarea {
+  padding-top: 1.6rem;
+  font-family: "Karla", sans-serif;
+  min-height: 15rem;
+  max-width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.InputFieldContainer input:focus-visible,
+.InputFieldContainer textarea:focus-visible {
+  outline: none;
+}

@@ -4,10 +4,10 @@ import './IntroInformation.css';
 
 const IntroInformation = () => {
   return (
-    <div className="IntroInformation" id="contactMe">
+    <div className="IntroInformation">
       <div className="TextBlock">
         <div className="Wrapper">
-          <h2>Me, Myself and I</h2>
+          <h2 className="H2Lables">Me, Myself and I</h2>
           <p>
             Welcome to my digital realm, where creativity and technology merge to shape captivating web development experiences.
             <br/><br/>

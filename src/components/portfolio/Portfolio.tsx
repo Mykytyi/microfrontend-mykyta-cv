@@ -19,7 +19,7 @@ const Portfolio = () => {
   return (
     <div className="Portfolio">
       <div className="TextBlock">
-        <h2>My Portfolio</h2>
+        <h2 className="H2Lables">My Portfolio</h2>
         <p>
           A small gallery of recent projects chosen by me. I’ve done them all together with amazing people from companies around the globe.
         </p>

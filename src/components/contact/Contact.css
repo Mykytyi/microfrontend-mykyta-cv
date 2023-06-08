@@ -1,0 +1,65 @@
+.Contact {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  padding-left: 10%;
+  min-height: 100vh;
+  -webkit-min-height: 100svh;
+  -moz-min-height: 100vh;
+}
+
+.Contact > div {
+  z-index: 5;
+}
+
+.Contact::before {
+  position: absolute;
+  top: 10vh;
+  left: 35vw;
+  content: "@";
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 50rem;
+  color: rgba(163, 163, 163, .03);
+  z-index: 0;
+}
+
+.Contact .FormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 5rem;
+  width: 45%;
+}
+
+.Contact .FormContainer .TextDetails {
+  margin-bottom: 8rem;
+}
+
+.Contact .MapContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 55%;
+}
+
+.Contact .MapContainer .LocationDetails {
+  position: absolute;
+  top: 10vh;
+  left: 3rem;
+  background: rgba(3, 3, 3, 0.87);
+  padding: 2rem 3rem;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.8rem;
+}
+
+.Contact .MapContainer .LocationDetails .Captcha{
+  color: #2FB4FF;
+}
+
+.Contact .MapContainer .Wrapper img {
+  width: 100%;
+  max-width: 90rem;
+}

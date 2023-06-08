@@ -4,6 +4,8 @@
   position: relative;
   flex-direction: column;
   min-height: 100vh;
+  -webkit-min-height: 100svh;
+  -moz-min-height: 100svh;
   padding-top: 10rem;
 }
 
@@ -23,40 +25,6 @@
   max-width: 65rem;
   margin-bottom: 15rem;
   padding: 0 10%;
-}
-
-.Portfolio .TextBlock h2 {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 7rem;
-  margin-left: -0.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 5.4rem;
-  color: #2FB4FF;
-  white-space: nowrap;
-}
-
-.Portfolio .TextBlock h2::before {
-  position: absolute;
-  top: -3rem;
-  left: -1.3rem;
-  content: "<h2>";
-  font-family: "Single Day", cursive;
-  font-size: 2.4rem;
-  font-weight: normal;
-  color: #515152;
-}
-
-.Portfolio .TextBlock h2::after {
-  position: absolute;
-  bottom: -3rem;
-  left: -1.3rem;
-  content: "</h2>";
-  font-family: "Single Day", cursive;
-  font-size: 2.4rem;
-  font-weight: normal;
-  color: #515152;
 }
 
 .Portfolio .TextBlock p {

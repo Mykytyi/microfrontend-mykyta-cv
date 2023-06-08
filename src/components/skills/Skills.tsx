@@ -7,7 +7,7 @@ const Skills = () => {
     <div className="Skills">
       <div className="TextBlock">
         <div className="Wrapper">
-          <h2>Skills</h2>
+          <h2 className="H2Lables">Skills</h2>
           <p>
             Since beginning my journey as a web developer nearly 5 years ago, I’ve done remote work for agencies, collaborated with talented people to create web products for both business and consumer use.
             <br/><br/>

@@ -3,6 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   min-height: 100vh;
+  -webkit-min-height: 100svh;
+  -moz-min-height: 100svh;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -13,40 +15,6 @@
   flex-direction: column;
   justify-content: center;
   width: 40%;
-}
-
-.IntroInformation .TextBlock .Wrapper h2 {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 7rem;
-  margin-left: -0.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 5.4rem;
-  color: #2FB4FF;
-  white-space: nowrap;
-}
-
-.IntroInformation .TextBlock .Wrapper h2::before {
-  position: absolute;
-  top: -3rem;
-  left: -1.3rem;
-  content: "<h2>";
-  font-family: "Single Day", cursive;
-  font-size: 2.4rem;
-  font-weight: normal;
-  color: #515152;
-}
-
-.IntroInformation .TextBlock .Wrapper h2::after {
-  position: absolute;
-  bottom: -3rem;
-  left: -1.3rem;
-  content: "</h2>";
-  font-family: "Single Day", cursive;
-  font-size: 2.4rem;
-  font-weight: normal;
-  color: #515152;
 }
 
 .IntroInformation .TextBlock .Wrapper p {
