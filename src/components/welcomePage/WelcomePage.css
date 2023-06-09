@@ -164,13 +164,42 @@
 }
 
 .WelcomePage .AdditionalElements .wrapper .scroll-1 {
+  animation: scrollDownAnimation infinite 1s 3s ease-in-out;
   left: -3rem;
   bottom: 6rem;
 }
 
 .WelcomePage .AdditionalElements .wrapper .scroll-2 {
+  animation: scrollDownAnimation infinite 1s 3s ease-in-out;
+  animation-fill-mode: both;
   right: -3rem;
   bottom: 6rem;
+}
+
+@keyframes scrollDownAnimation {
+  0% {
+    transform: translateY(0) rotate(90deg);;
+  }
+
+  30% {
+  }
+
+  40% {
+  }
+
+  50% {
+    transform: translateY(-30px) rotate(90deg);;
+  }
+
+  65% {
+  }
+
+  75% {
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);;
+  }
 }
 
 /*@media screen and (max-width: 1300px) {*/
