@@ -5,9 +5,7 @@ import './WelcomePage.css';
 
 const WelcomePage = () => {
   const [animationClass, setAnimationClass] = useState<string>('');
-  const firstRow = 'Hi there,'.split('');
-  const secondRow = 'I\'m Mykyta,'.split('');
-  const thirdRow = 'web developer'.split('');
+  const introText = 'Hi there, I\'m Mykyta, web developer'.split('');
 
   useEffect(() => {
     setAnimationClass('AppearanceAnimation');
@@ -17,16 +15,8 @@ const WelcomePage = () => {
     <div className={`WelcomePage ${animationClass}`}>
       <div className="Wrapper">
         <h1>
-          {firstRow.map((char, index) => {
-            return <CharacterWrapper char={char} num={index} row={1}/>;
-          })}
-          <br/>
-          {secondRow.map((char, index) => {
-            return <CharacterWrapper char={char} num={index} row={2}/>;
-          })}
-          <br/>
-          {thirdRow.map((char, index) => {
-            return <CharacterWrapper char={char} num={index} row={3}/>;
+          {introText.map((char, index) => {
+            return <CharacterWrapper char={char} num={(index + 1)} row={1}/>;
           })}
         </h1>
         <p className="FrontendDeveloper">
