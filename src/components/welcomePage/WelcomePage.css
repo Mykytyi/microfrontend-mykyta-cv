@@ -24,7 +24,14 @@
   line-height: 7.5rem;
   white-space: nowrap;
   user-select: none;
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+  transition-delay: 1s;
   -webkit-user-select: none;
+}
+
+.WelcomePage.AppearanceAnimation .Wrapper h1 {
+  opacity: 1;
 }
 
 .WelcomePage .Wrapper h1::before {
@@ -36,6 +43,12 @@
   font-size: 2.4rem;
   font-weight: normal;
   color: #515152;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+
+.WelcomePage.AppearanceAnimation .Wrapper h1::before {
+  opacity: 1;
 }
 
 .WelcomePage .Wrapper h1::after {
@@ -47,15 +60,30 @@
   color: #515152;
   font-size: 2.4rem;
   font-weight: normal;
+  transition: opacity 1s ease-out;
+  opacity: 0;
 }
 
-.WelcomePage .Wrapper .FrontendDeveloper {
+.WelcomePage.AppearanceAnimation .Wrapper h1::after {
+  opacity: 1;
+}
+
+.WelcomePage .Wrapper p.FrontendDeveloper {
   position: relative;
   margin-top: 0;
   margin-bottom: 6rem;
   font-size: 2.4rem;
   letter-spacing: 0.4rem;
   color: #8D8D8D;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateY(20px);
+  transition-delay: 0.7s;
+}
+
+.WelcomePage.AppearanceAnimation .Wrapper p.FrontendDeveloper {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .WelcomePage .Wrapper p.FrontendDeveloper::before {
@@ -90,11 +118,28 @@
   font-size: 1.8rem;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.4rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s 1s;
+}
+
+.WelcomePage.AppearanceAnimation .Wrapper .Button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.WelcomePage .Wrapper .Button a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 4.5rem;
+  text-decoration: none;
+  color: #0081FB;
   transition: 0.5s;
 }
 
-.WelcomePage .Wrapper .Button:hover,
-.WelcomePage .Wrapper .Button:focus {
+.WelcomePage .Wrapper .Button:hover a,
+.WelcomePage .Wrapper .Button:focus a {
   color: #000000;
   box-shadow: inset 0 0 0 2em #0081FB;
   cursor: pointer;
