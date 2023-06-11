@@ -4,7 +4,8 @@ import './IntroInformation.css';
 
 const IntroInformation = () => {
   return (
-    <div className="IntroInformation">
+    <div className="IntroInformation"
+    >
       <div className="TextBlock">
         <div className="Wrapper">
           <h2 className="H2Lables">Me, Myself and I</h2>
@@ -14,6 +15,8 @@ const IntroInformation = () => {
             Inspired by the idea of building a website for my family business, I embarked on a journey of continuous growth and innovation.
             <br/><br/>
             I have been working for companies and individuals for about five years and I had many opportunities to work in a vast spectrum of web technologies what let me gather a significant amount of various experience.
+            <br/><br/>
+            A few words about my hobbies: I enjoy table tennis, find relaxation in gym workouts, and love cycling. They keep me fit, focused, and forever chasing new levels of strength and skill.
           </p>
         </div>
       </div>
