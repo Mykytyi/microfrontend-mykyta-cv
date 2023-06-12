@@ -26,7 +26,7 @@ const Sphere = React.memo(() => {
     if (size > 500) {
       return 200;
     }
-    return 150;
+    return 200;
   };
 
   useEffect(() => {

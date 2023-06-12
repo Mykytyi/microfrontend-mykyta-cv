@@ -63,3 +63,47 @@
   width: 100%;
   max-width: 90rem;
 }
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .Contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .Contact .FormContainer {
+    width: auto;
+    padding: 0 10rem;
+    margin: 0 0 10rem;
+  }
+  .Contact .MapContainer {
+    width: 100%;
+  }
+  .Contact .MapContainer .LocationDetails {
+    top: 1vh;
+  }
+  .InputFieldContainer input, .InputFieldContainer input,
+  .InputFieldContainer input, .InputFieldContainer textarea {
+    border-radius: 0;
+    font-weight: lighter;
+  }
+  .ContactForm .FourthRow .ContactFormButton {
+    font-weight: normal;
+  }
+  .Contact .MapContainer .Wrapper img {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+
+}

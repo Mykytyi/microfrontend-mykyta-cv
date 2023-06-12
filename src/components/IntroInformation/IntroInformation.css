@@ -51,3 +51,28 @@
   align-items: center;
   width: 50%;
 }
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .IntroInformation {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .IntroInformation .TextBlock {
+    width: auto;
+  }
+  .IntroInformation .SphereBlock {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 380px) {
+
+}
