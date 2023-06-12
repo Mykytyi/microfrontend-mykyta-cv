@@ -1,14 +1,30 @@
+import { useEffect, useState } from 'react';
 import Sphere from './sphere/Sphere';
+import CharacterWrapper from '../welcomePage/characterWrapper/CharacterWrapper';
+import { animationListener } from '../../helpers/animations';
 
 import './IntroInformation.css';
 
 const IntroInformation = () => {
+  const [animated, setAnimated] = useState(false);
+  const introText = 'Me, Myself and I'.split('');
+
+  useEffect(animationListener(setAnimated, 'IntroInformation'), [animated]);
+
   return (
-    <div className="IntroInformation"
-    >
+    <div className="IntroInformation" id="IntroInformation">
       <div className="TextBlock">
         <div className="Wrapper">
-          <h2 className="H2Lables">Me, Myself and I</h2>
+          <h2 className="H2Lables">
+            {introText.map((char, index) => {
+              return <CharacterWrapper
+                key={index}
+                char={char}
+                num={(index + 1)}
+                isAnimated={animated}
+              />;
+            })}
+          </h2>
           <p>
             Welcome to my digital realm, where creativity and technology merge to shape captivating web development experiences.
             <br/><br/>

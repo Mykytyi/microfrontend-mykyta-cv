@@ -1,3 +1,7 @@
+import { useEffect, useState } from 'react';
+import CharacterWrapper from '../welcomePage/characterWrapper/CharacterWrapper';
+import { animationListener } from '../../helpers/animations';
+
 import LendironLogo from '../../pics/Lendiron/LendironLogo.png';
 import MainBoat from '../../pics/Lendiron/MainBoat.jpg';
 import Graphs from '../../pics/Lendiron/Graphs.jpg';
@@ -16,10 +20,19 @@ import AdminPanelTwo from '../../pics/Goodlike/AdminPanelTwo.png';
 import './Portfolio.css';
 
 const Portfolio = () => {
+  const [animated, setAnimated] = useState(false);
+  const introText = 'My Portfolio'.split('');
+
+  useEffect(animationListener(setAnimated, 'Portfolio'), [animated]);
+
   return (
-    <div className="Portfolio">
+    <div className="Portfolio" id="Portfolio">
       <div className="TextBlock">
-        <h2 className="H2Lables">My Portfolio</h2>
+        <h2 className="H2Lables">
+          {introText.map((char, index) => {
+            return <CharacterWrapper key={index} char={char} num={(index + 1)} isAnimated={animated}/>;
+          })}
+        </h2>
         <p>
           A small gallery of recent projects chosen by me. I’ve done them all together with amazing people from companies around the globe.
         </p>
