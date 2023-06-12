@@ -74,6 +74,7 @@
   padding: 3rem;
   width: 50%;
   background-color: #2A2A2A;
+  box-sizing: border-box;
 }
 
 .Skills .SkillsDetails .Jobs .Job:last-child {
@@ -105,4 +106,46 @@
   font-size: 1.6rem;
   font-weight: normal;
   color: #ABABAB;
+}
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .Skills {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 10rem;
+  }
+  .Skills .TextBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    margin-bottom: 6rem;
+  }
+  .Skills .SkillsDetails {
+    width: auto;
+  }
+  .Skills .SkillsDetails .Jobs {
+    flex-direction: column;
+  }
+  .Skills .SkillsDetails .Jobs .Job {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .Skills .SkillsDetails .Jobs .Job:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+
 }
