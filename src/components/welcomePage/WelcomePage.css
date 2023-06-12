@@ -111,9 +111,9 @@
   position: absolute;
   height: 5rem;
   min-width: 22rem;
-  border: 0.2rem solid #0081FB;
+  border: 0.2rem solid #2FB4FF;
   padding: 0;
-  color: #0081FB;
+  color: #2FB4FF;
   background: none;
   font-size: 1.8rem;
   font-family: 'Montserrat', sans-serif;
@@ -134,14 +134,14 @@
   height: 100%;
   line-height: 4.5rem;
   text-decoration: none;
-  color: #0081FB;
+  color: #2FB4FF;
   transition: 0.5s;
 }
 
 .WelcomePage .Wrapper .Button:hover a,
 .WelcomePage .Wrapper .Button:focus a {
   color: #000000;
-  box-shadow: inset 0 0 0 2em #0081FB;
+  box-shadow: inset 0 0 0 2em #2FB4FF;
   cursor: pointer;
 }
 

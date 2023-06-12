@@ -5,9 +5,12 @@ import './WelcomePage.css';
 
 const WelcomePage = () => {
   const [animationClass, setAnimationClass] = useState<string>('');
+  const [animated, setAnimated] = useState(false);
   const introText = 'Hi there, I\'m Mykyta, web developer'.split('');
+  const newLines = [10, 22];
 
   useEffect(() => {
+    setAnimated(true);
     setAnimationClass('AppearanceAnimation');
   }, []);
 
@@ -16,7 +19,14 @@ const WelcomePage = () => {
       <div className="Wrapper">
         <h1>
           {introText.map((char, index) => {
-            return <CharacterWrapper char={char} num={(index + 1)} row={1}/>;
+            return <CharacterWrapper
+              key={index}
+              char={char}
+              num={(index + 1)}
+              withSVG
+              newLines={newLines}
+              isAnimated={animated}
+            />;
           })}
         </h1>
         <p className="FrontendDeveloper">
