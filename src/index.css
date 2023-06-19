@@ -162,7 +162,7 @@ body {
 }
 
 @media screen and (max-width: 380px) {
-  /*html {*/
-  /*  font-size: 5px;*/
-  /*}*/
+  html {
+    font-size: 5px;
+  }
 }
