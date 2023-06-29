@@ -1,0 +1,48 @@
+.InterviewContainer {
+  padding: 0 5%;
+  background-color: #FFF;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 2rem;
+}
+
+.InterviewContainer h2 {
+  margin: 2rem 0 1rem;
+}
+
+.InterviewContainer li {
+  margin-bottom: 0.4rem;
+  padding-left: revert;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.InterviewContainer li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #000000; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 2rem; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.InterviewContainer .Done li::before {
+  color: #2db400; /* Change the color */
+}
+
+.InterviewContainer li a {
+  cursor: alias;
+}
+
+.InterviewContainer li:hover {
+  background-color: rgba(155, 155, 155, 0.38);
+}
+
+code {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  margin: 0 0.4rem;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+}

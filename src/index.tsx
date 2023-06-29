@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './components/app/App';
+import Interview from './components/interview/Interview';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +11,14 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename='/'>
+      <Routes>
+        <Route path='/' element={<App />} />
+      </Routes>
+      <Routes>
+        <Route path='/interview' element={<Interview />}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -1,0 +1,26 @@
+
+.QuestionContainer textarea {
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  max-width: 70rem;
+  min-width: 70rem;
+  min-height: 10rem;
+}
+
+.QuestionContainer .LiWrapper {
+  display: inline-block;
+}
+
+.QuestionContainer textarea:focus-visible {
+  outline: none;
+}
+
+.QuestionContainer .Green {
+  border: 1px solid rgb(69, 210, 134);
+  box-shadow: rgba(74, 238, 147, 0.2) 0px 8px 24px;
+}
+
+.QuestionContainer button {
+  display: block;
+}
