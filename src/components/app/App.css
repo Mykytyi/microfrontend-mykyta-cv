@@ -15,6 +15,39 @@
   left: 5rem;
 }
 
+.Animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.BackInRight {
+  -webkit-animation-name: backInRight;
+  animation-name: backInRight;
+}
+
+.App .AlertContainer {
+  position: fixed;
+  bottom: 3rem;
+  right: 5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.App .AlertContainer .MuiPaper-root {
+  align-content: center;
+}
+
+.App .AlertContainer .MuiPaper-root .MuiAlert-message {
+  font-size: 1.8rem;
+
+}
+.App .AlertContainer .MuiPaper-root .MuiAlert-icon {
+  align-items: center;
+}
+
+
 header span::after {
   content: "<body>";
   font-family: "Single Day", cursive;
@@ -47,6 +80,26 @@ footer::after {
   position: absolute;
   top: -8rem;
   left: 7.5rem;
+}
+
+@keyframes backInRight {
+  0% {
+    -webkit-transform: translateX(2000px) scale(.7);
+    transform: translateX(2000px) scale(.7);
+    opacity: .7
+  }
+
+  80% {
+    -webkit-transform: translateX(0) scale(.7);
+    transform: translateX(0) scale(.7);
+    opacity: .7
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+  }
 }
 
 @media screen and (max-width: 1300px) {
