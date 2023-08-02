@@ -3,14 +3,12 @@
   bottom: 3rem;
   right: 5rem;
   z-index: 100;
-  transition: height 1s ease-out;
 }
 
 .App .MessagesContainer .AlertContainer {
   box-shadow: 0 0 8px 5px rgba(60, 60, 60, 0.5);
   margin-bottom: 1rem;
   border-radius: 10px;
-  /*transition: all .3s ease-out;*/
 }
 
 .App .MessagesContainer .AlertContainer:last-child {
