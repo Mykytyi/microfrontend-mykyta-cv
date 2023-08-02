@@ -18,6 +18,17 @@
   box-sizing: border-box;
 }
 
+.InputFieldContainer.required::after,
+.InputFieldContainer.required::after {
+  content: "*";
+  position: absolute;
+  top: -3px;
+  right: 3px;
+  font-size: 3.5rem;
+  display: inline-block;
+  color: #d0011b;
+}
+
 .InputFieldContainer input + label:before,
 .InputFieldContainer textarea + label:before {
   content: '';

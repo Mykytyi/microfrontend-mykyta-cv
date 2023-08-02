@@ -25,7 +25,7 @@ const InputField: React.FC<Props> = ({
 }) => {
   if (textArea) {
     return (
-      <div className={`InputFieldContainer ${additionalClassName} ${error ? 'error' : ''}`}>
+      <div className={`InputFieldContainer ${additionalClassName} ${error ? 'error' : ''} ${required ? 'required' : ''}`}>
         <textarea
           id={name}
           onChange={onChange}
@@ -38,7 +38,7 @@ const InputField: React.FC<Props> = ({
     );
   }
   return (
-    <div className={`InputFieldContainer ${additionalClassName} ${error ? 'error' : ''}`}>
+    <div className={`InputFieldContainer ${additionalClassName} ${error ? 'error' : ''} ${required ? 'required' : ''}`}>
       <input
         id={name}
         value={value}
