@@ -9,11 +9,11 @@ type AddMessage = {
   message: Message,
 }
 
-type RemoveAllMessages = {
-  type: 'REMOVE_ALL_MESSAGES',
+type RemoveMessage = {
+  type: 'REMOVE_MESSAGE',
 }
 
-export type AppActions = AddMessage | RemoveAllMessages;
+export type AppActions = AddMessage | RemoveMessage;
 
 export const addMessage = (message: Message): AddMessage => {
   return {
@@ -22,9 +22,9 @@ export const addMessage = (message: Message): AddMessage => {
   }
 };
 
-export const removeAllMessages = (): RemoveAllMessages => {
+export const removeMessage = (): RemoveMessage => {
   return {
-    type: 'REMOVE_ALL_MESSAGES',
+    type: 'REMOVE_MESSAGE',
   }
 };
 

@@ -70,24 +70,3 @@
   position: relative !important;
   padding: 0 4rem;
 }
-
-.ContactForm .FourthRow .Tooltip {
-  position: absolute;
-  visibility: hidden;
-  top: -2rem;
-  right: 13rem;
-  width: 16rem;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  font-size: 1.4rem;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  /* Position the tooltip text - see examples below! */
-  z-index: 1;
-}
-
-.ContactForm .FourthRow .ContactFormButton:hover + .Tooltip.shown {
-  visibility: visible;
-}

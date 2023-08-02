@@ -1,5 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
-import Alert from '@mui/material/Alert';
+import { useContext } from 'react';
 import { Form, Field } from 'react-final-form'
 import emailjs from '@emailjs/browser';
 import _ from 'lodash';
@@ -19,24 +18,11 @@ interface FormValues {
 const ContactForm = () => {
   const { dispatch } = useContext(AppContext);
 
-  const [informMessage, setInformMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (informMessage) {
-      setTimeout(() => {
-        setInformMessage(null);
-      }, 5000);
-    }
-  }, [informMessage]);
-
   const handleClick = () => {
     dispatch(appActions.addMessage({
-      type: 'error',
+      type: 'success',
       message: 'Information!',
     }));
-  }
-  const remove = () => {
-    dispatch(appActions.removeAllMessages());
   }
 
   const validator = (values: FormValues) => {
@@ -54,7 +40,6 @@ const ContactForm = () => {
   };
 
   const sendEmail = (values: FormValues) => {
-    console.log('Values: ', values);
     const dataToSend = {
       name: values.name,
       email: values.email,
@@ -64,11 +49,17 @@ const ContactForm = () => {
 
     emailjs.send('service_bifqn4i', 'template_b6eeboc', dataToSend, 'o4lBUlw2FhJLrkHJ4')
       .then(function(response) {
-        setInformMessage('Email was successfully sent!');
-        console.log('SUCCESS!', response.status, response.text);
+        dispatch(appActions.addMessage({
+          type: 'success',
+          message: 'Email was successfully sent!',
+        }));
+        console.info('SUCCESS!', response.status, response.text);
       }, function(error) {
-        setInformMessage('Oops, something went wrong, try again later');
-        console.log('FAILED...', error);
+        dispatch(appActions.addMessage({
+          type: 'error',
+          message: 'Oops, something went wrong, please try again later',
+        }));
+        console.info('FAILED...', error);
       });
   };
 
@@ -91,6 +82,17 @@ const ContactForm = () => {
           errors,
           values,
         }) => {
+          const handleSubmitClick = () => {
+            if (!_.isEmpty(errors)) {
+              dispatch(appActions.addMessage({
+                type: 'info',
+                message: 'Fill in all required fields',
+              }));
+            } else {
+              handleSubmit();
+              form.reset();
+            }
+          }
 
           return (
             <form onSubmit={handleSubmit}>
@@ -165,21 +167,7 @@ const ContactForm = () => {
                   text="Send message!"
                   type="submit"
                   additionalClassName="ContactFormButton"
-                  onClick={() => form.reset()}
-                  disabled={!_.isEmpty(errors)}
-                />
-                <span className={`Tooltip ${!_.isEmpty(errors) ? 'shown' : ''}`}>Fill in all required fields</span>
-                <Button
-                  text="ADD"
-                  additionalClassName="ContactFormButton"
-                  onClick={handleClick}
-                  disabled={false}
-                />
-                <Button
-                  text="REMOVE"
-                  additionalClassName="ContactFormButton"
-                  onClick={remove}
-                  disabled={false}
+                  onClick={handleSubmitClick}
                 />
               </div>
             </form>

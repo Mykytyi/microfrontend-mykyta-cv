@@ -4,7 +4,7 @@ import './Button.css';
 
 interface Props {
   text: string,
-  disabled: boolean,
+  disabled?: boolean,
   additionalClassName?: string,
   onClick?: (props: any) => any,
   type?: "button" | "submit" | "reset" | undefined,

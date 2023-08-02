@@ -15,10 +15,12 @@ export function appReducer(state: typeof initialAppState, action: AppActions) {
         ...state,
         messages: [...state.messages, action.message],
       }
-    case "REMOVE_ALL_MESSAGES":
+    case "REMOVE_MESSAGE":
+      const newArray = [...state.messages];
+      newArray.pop();
       return {
       ...state,
-      messages: [],
+      messages: [...newArray],
     }
     default:
       return initialAppState;
