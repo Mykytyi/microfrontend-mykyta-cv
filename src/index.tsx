@@ -23,14 +23,15 @@ root.render(
   <ThemeProvider theme={darkTheme}>
     <React.StrictMode>
       <AppProvider>
-        <BrowserRouter basename='/'>
-          <Routes>
-            <Route path='/' element={<App />} />
-          </Routes>
-          <Routes>
-            <Route path='/interview' element={<Interview />}/>
-          </Routes>
-        </BrowserRouter>
+        <App />
+        {/*<BrowserRouter basename='/'>*/}
+        {/*  <Routes>*/}
+        {/*    <Route path='/' element={<App />} />*/}
+        {/*  </Routes>*/}
+        {/*  <Routes>*/}
+        {/*    <Route path='/interview' element={<Interview />}/>*/}
+        {/*  </Routes>*/}
+        {/*</BrowserRouter>*/}
       </AppProvider>
     </React.StrictMode>
   </ThemeProvider>
