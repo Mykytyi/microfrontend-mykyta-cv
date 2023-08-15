@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/app';
 import App from './components/app/App';
-import Interview from './components/interview/Interview';
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
@@ -24,14 +22,6 @@ root.render(
     <React.StrictMode>
       <AppProvider>
         <App />
-        {/*<BrowserRouter basename='/'>*/}
-        {/*  <Routes>*/}
-        {/*    <Route path='/' element={<App />} />*/}
-        {/*  </Routes>*/}
-        {/*  <Routes>*/}
-        {/*    <Route path='/interview' element={<Interview />}/>*/}
-        {/*  </Routes>*/}
-        {/*</BrowserRouter>*/}
       </AppProvider>
     </React.StrictMode>
   </ThemeProvider>
