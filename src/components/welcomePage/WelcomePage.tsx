@@ -26,6 +26,7 @@ const WelcomePage = () => {
               withSVG
               newLines={newLines}
               isAnimated={animated}
+              isWelcomePage={true}
             />;
           })}
         </h1>

@@ -164,13 +164,13 @@
 }
 
 .WelcomePage .AdditionalElements .wrapper .scroll-1 {
-  animation: scrollDownAnimation infinite 1s 3s ease-in-out;
+  animation: scrollDownAnimation infinite 1s 5s ease-in-out;
   left: -3rem;
   bottom: 6rem;
 }
 
 .WelcomePage .AdditionalElements .wrapper .scroll-2 {
-  animation: scrollDownAnimation infinite 1s 3s ease-in-out;
+  animation: scrollDownAnimation infinite 1s 5s ease-in-out;
   animation-fill-mode: both;
   right: -3rem;
   bottom: 6rem;
