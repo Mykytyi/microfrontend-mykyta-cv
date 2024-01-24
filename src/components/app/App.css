@@ -2,6 +2,13 @@
   background-color: #212121;
   color: #ffffff;
   overflow: auto;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.Shown {
+  animation-name: smoothAppearing;
 }
 
 
@@ -70,4 +77,13 @@ footer::after {
 
 @media screen and (max-width: 380px) {
 
+}
+
+@keyframes smoothAppearing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

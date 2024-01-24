@@ -6,7 +6,6 @@
 .Char {
   display: inline-block;
   opacity: 1;
-  transition: all 0.3s ease-out;
 }
 
 .Char:hover {

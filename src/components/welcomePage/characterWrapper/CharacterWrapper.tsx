@@ -27,17 +27,17 @@ const CharacterWrapper: FC<Props> = ({
     if (isAnimated) {
       setTimeout(() => {
         setClassArray(['Char', 'animated', 'rubberBand']);
-      }, num * 75);
+      }, num * 75 + 1000);
       setTimeout(() => {
         setClassArray(['Char']);
-      }, num * 75 + 1000)
+      }, num * 75 + 2000)
       if (char === 'M') {
         setTimeout(() => {
           setCharLogoClass(['Char-logo', 'CharLogoAnimated']);
-        }, (num * 75));
+        }, (num * 75 + 1000));
       }
     }
-  }, [isAnimated]);
+  }, [isAnimated, num, char]);
 
   if (newLines?.includes(num)) {
     return <br/>;

@@ -30,6 +30,16 @@ time, mark, audio, video, p {
   pointer-events: none
 }
 
+.DisabledCanvas {
+  display: none;
+}
+
+.CenteredContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   margin: 0;
   background: #212121;
