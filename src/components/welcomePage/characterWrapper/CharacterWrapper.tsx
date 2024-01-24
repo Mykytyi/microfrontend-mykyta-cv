@@ -11,6 +11,7 @@ type Props = {
   isAnimated: boolean;
   newLines?: Array<number>;
   withSVG?: boolean;
+  isWelcomePage?: boolean;
 }
 
 const CharacterWrapper: FC<Props> = ({
@@ -19,25 +20,28 @@ const CharacterWrapper: FC<Props> = ({
   isAnimated,
   newLines,
   withSVG,
+  isWelcomePage,
 }) => {
   const [classArray, setClassArray] = useState(['']);
   const [charLogoClass, setCharLogoClass] = useState(['Char-logo']);
+
+  const delay = isWelcomePage ? 1000 : 0;
 
   useEffect(() => {
     if (isAnimated) {
       setTimeout(() => {
         setClassArray(['Char', 'animated', 'rubberBand']);
-      }, num * 75 + 1000);
+      }, num * 75 + delay);
       setTimeout(() => {
         setClassArray(['Char']);
-      }, num * 75 + 2000)
+      }, num * 75 + 1000 + delay)
       if (char === 'M') {
         setTimeout(() => {
           setCharLogoClass(['Char-logo', 'CharLogoAnimated']);
-        }, (num * 75 + 1000));
+        }, (num * 75 + delay));
       }
     }
-  }, [isAnimated, num, char]);
+  }, [isAnimated, num, char, delay]);
 
   if (newLines?.includes(num)) {
     return <br/>;
