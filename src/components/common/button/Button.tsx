@@ -20,7 +20,7 @@ const Button: React.FC<Props> = ({
   return (
     <button
       type={type ? type : undefined}
-      className={`Button ${additionalClassName} ${disabled ? 'disabled' : ''}`}
+      className={`CommonButton ${additionalClassName} ${disabled ? 'disabled' : ''}`}
       disabled={disabled}
       onClick={onClick}
     >{text}</button>

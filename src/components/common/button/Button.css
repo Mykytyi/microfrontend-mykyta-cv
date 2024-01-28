@@ -1,4 +1,4 @@
-.Button {
+.CommonButton {
   display: block;
   position: absolute;
   height: 5rem;
@@ -13,20 +13,20 @@
   transition: 0.5s;
 }
 
-.Button.disabled {
+.CommonButton.disabled {
   border: 0.2rem solid #7f8aa2;
   color: #7f8aa2;
 }
 
-.Button:hover,
-.Button:focus {
+.CommonButton:hover,
+.CommonButton:focus {
   color: #000000;
   box-shadow: inset 0 0 0 2em #0081FB;
   cursor: pointer;
 }
 
-.Button.disabled:hover,
-.Button.disabled:focus {
+.CommonButton.disabled:hover,
+.CommonButton.disabled:focus {
   color: #7f8aa2;
   box-shadow: none;
   cursor: pointer;

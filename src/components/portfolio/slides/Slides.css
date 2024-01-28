@@ -1,0 +1,102 @@
+.Slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.Slides .Wrapper {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  height: 30rem;
+
+  transition: left 2s, top 2s;
+}
+
+.Slides .ImageWrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.Slides .Wrapper .ImageWrapper .Button {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  transform: translate(-50%, -50%) scale(0);
+  top: 50%;
+  left: 50%;
+  background-color: #2FB4FF;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  border-radius: 5rem;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: all .2s ease-out;
+  cursor: pointer;
+}
+
+.Slides .Wrapper .ImageWrapper:hover .Button {
+  transform: translate(-50%, -50%) scale(.9);
+}
+
+.Slides .Wrapper .ImageWrapper:hover .Button:hover {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.Slides .Wrapper .ImageWrapper:hover .Button:active {
+  transform: translate(-50%, -50%) scale(.95);
+}
+
+.Slides .Wrapper .ImageWrapper img {
+  height: auto;
+  transition: all .2s linear;
+}
+
+.Slides .Wrapper .ImageWrapper:hover > img {
+  filter: brightness(70%);
+  transform: scale(1.1);
+}
+
+.Slides .AdditionalImage {
+  display: inline-block;
+  position: absolute;
+  overflow: auto;
+  transition: all .2s linear;
+}
+
+.Slides .ImageWrapper.MainPicture {
+  z-index: 5;
+}
+
+.Slides .ImageWrapper .SecondPicture {
+  top: 10%;
+  left: -10rem;
+  z-index: -1;
+}
+
+.Portfolio .Project.A1Block .Slides .ImageWrapper .ThirdPicture {
+  top: 15%;
+}
+
+.Slides .ImageWrapper .SecondPicture img {
+  width: 35rem;
+  filter: brightness(70%);
+}
+
+.Slides .ImageWrapper .ThirdPicture {
+  top: 10%;
+  right: -10rem;
+  z-index: -1;
+}
+
+.Slides .ImageWrapper .ThirdPicture img {
+  width: 35rem;
+  filter: brightness(70%);
+}
+
+.Slides .ImageWrapper img {
+  width: 45rem;
+}

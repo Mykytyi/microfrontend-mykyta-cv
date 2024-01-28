@@ -178,15 +178,15 @@
 
 @keyframes scrollDownAnimation {
   0% {
-    transform: translateY(0) rotate(90deg);;
+    transform: translateY(0) rotate(90deg);
   }
 
   50% {
-    transform: translateY(-30px) rotate(90deg);;
+    transform: translateY(-30px) rotate(90deg);
   }
 
   100% {
-    transform: translateY(0) rotate(90deg);;
+    transform: translateY(0) rotate(90deg);
   }
 }
 
