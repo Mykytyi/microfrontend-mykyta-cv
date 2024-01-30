@@ -17,9 +17,7 @@ const Portfolio = () => {
   const [slides, setSlides] = useState<ISlides>(null);
   const introText = 'My Portfolio'.split('');
 
-  useEffect(() => {
-    animationListener(setAnimated, 'Portfolio')
-  }, [animated]);
+  useEffect(animationListener(setAnimated, 'Portfolio'), [animated]);
 
   useEffect(() => {
     if (slides) {

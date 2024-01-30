@@ -79,6 +79,7 @@
   transition: all 0.5s;
   transform: translateY(20px);
   transition-delay: 0.7s;
+  white-space: nowrap;
 }
 
 .WelcomePage.AppearanceAnimation .Wrapper p.FrontendDeveloper {
@@ -215,10 +216,9 @@
 }
 
 @media screen and (max-width: 380px) {
-  .WelcomePage .Wrapper h1 {
-
-  }
-  .WelcomePage .Wrapper .Char-logo {
-
+  .WelcomePage .Wrapper {
+    position: relative;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 }

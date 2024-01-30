@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 60%;
+  min-height: 30rem;
 }
 
 .Slides .Wrapper {
@@ -40,6 +41,7 @@
 
 .Slides .Wrapper .ImageWrapper:hover .Button {
   transform: translate(-50%, -50%) scale(.9);
+  color: #000;
 }
 
 .Slides .Wrapper .ImageWrapper:hover .Button:hover {
@@ -99,4 +101,29 @@
 
 .Slides .ImageWrapper img {
   width: 45rem;
+}
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+  .Slides .ImageWrapper img {
+    width: 60rem;
+  }
+
+  .Slides .ImageWrapper .ThirdPicture img {
+    width: 40rem;
+  }
+  .Slides .ImageWrapper .SecondPicture img {
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 380px) {
+
 }

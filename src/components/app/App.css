@@ -1,7 +1,7 @@
 .App {
   background-color: #212121;
   color: #ffffff;
-  overflow: auto;
+  overflow: hidden;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -61,7 +61,20 @@ footer::after {
 }
 
 @media screen and (max-width: 1100px) {
+  .App::before {
+    left: 3rem;
+  }
 
+  header span::after {
+    left: 5.5rem;
+  }
+  footer::before {
+    left: 3rem;
+  }
+
+  footer::after {
+    left: 5.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {

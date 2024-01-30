@@ -8,7 +8,7 @@ import Storybook from '../pics/A1/Storybook.png';
 
 import GoodLikeLanding from '../pics/Goodlike/GoodLikeLanding.png';
 import AdminPanelOne from '../pics/Goodlike/AdminPanelOne.png';
-import AdminPanelTwo from '../pics/Goodlike/AdminPanelTwo.png';
+import PanelOne from '../pics/Goodlike/PanelOne.png';
 
 import { ISlides } from '../type-definitions';
 
@@ -44,7 +44,7 @@ export const imageParser = (slides: ISlides, priority: 1 | 2 | 3) => {
         return AdminPanelOne;
       }
       if (priority === 3) {
-        return AdminPanelTwo;
+        return PanelOne;
       }
       break;
   }

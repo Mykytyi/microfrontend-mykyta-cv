@@ -7,6 +7,7 @@
   -moz-min-height: 100svh;
   padding-left: 10%;
   padding-right: 10%;
+  padding-top: 7%;
 }
 
 
@@ -64,6 +65,7 @@
   .IntroInformation {
     flex-direction: column;
     justify-content: center;
+    padding-top: 7%;
   }
   .IntroInformation .TextBlock {
     width: auto;
@@ -74,5 +76,7 @@
 }
 
 @media screen and (max-width: 380px) {
-
+  .IntroInformation {
+    padding-top: 10%;
+  }
 }

@@ -6,7 +6,7 @@
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -16,8 +16,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100rem;
-  height: 50rem;
+  width: 200rem;
+  height: 100rem;
   left:50%;
   top:50%;
   -webkit-transform: translate(-50%, -50%);
@@ -110,6 +110,13 @@
   height: 100%;
   object-fit: cover;
   object-position: left top;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .Portfolio .ModalWindow .ModalContent .ContentWrapper.First {
@@ -249,7 +256,7 @@
   }
 
   50% {
-    z-index: 4;
+    z-index: 3;
     left: -2.5rem;
     transform: scale(0.8);
     box-shadow: unset;
@@ -283,5 +290,205 @@
     left: 0;
     transform: scale(1);
     box-shadow: #0081FB 0 0 15px 3px;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 130rem;
+    height: 75rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 90%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 110rem;
+    height: 55rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 85%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 100rem;
+    height: 50rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 75%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 75%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -4rem;
+    top: -3rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 80rem;
+    height: 40rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 75%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 75%;
+  }
+
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -4rem;
+    top: -3rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 60rem;
+    height: 30rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -5rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -5rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 60%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 60%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -4rem;
+    top: -3rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 60rem;
+    height: 30rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -7rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -7rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 50%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 50%;
+  }
+
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -5rem;
+    top: -4rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 50rem;
+    height: 25rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -7rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -7rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 40%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 40%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -4rem;
+    top: -3rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 60%;
   }
 }
