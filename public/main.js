@@ -36,8 +36,8 @@ class Particle {
 }
 
 document.body.addEventListener('mousemove', (event) => {
-	mouse.x = event.x + 140;
-	mouse.y = event.y;
+	mouse.x = event.x;
+	mouse.y = event.y - 10;
 	for (let i = 0; i < 3; i++) {
 		spots.push(new Particle());
 	}
