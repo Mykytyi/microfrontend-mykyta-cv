@@ -15,8 +15,16 @@ const forwardAnim = ['AnimationOneTwo', 'AnimationTwoThree', 'AnimationThreeOne'
 const backwardAnim = ['AnimationOneThree', 'AnimationTwoOne', 'AnimationThreeTwo'];
 
 const ModalWindow = ({ slides, setSlides }: Props) => {
+  const [ controlledSlide, setControlledSlide ] = useState(slides);
   const [slideNumber, setSlideNumber] = useState<number | null>(null);
   const [animated, setAnimated] = useState<null | 'previous' | 'secondary'>(null);
+
+
+  useEffect(() => {
+    if (slides) {
+      setControlledSlide(slides);
+    }
+  }, [slides]);
 
   const slideHandler = (slide: 'previous' | 'secondary') => {
     setAnimated(slide);
@@ -72,26 +80,24 @@ const ModalWindow = ({ slides, setSlides }: Props) => {
   };
 
   const handleClose = () => {
-    setSlideNumber(null);
-    setAnimated(null);
+    setTimeout(() => {
+      setSlideNumber(null);
+      setAnimated(null);
+    }, 1000);
     setSlides(null);
   }
 
-  if (!slides) {
-    return null;
-  }
-
   return (
-    <div className="ModalWindow">
+    <div className={`ModalWindow ${slides && 'Shown'}`}>
       <div className="ModalContent">
         <div className={`ContentWrapper First ${contentWrapperHandler(0)}`}>
-          <img src={imageParser(slides, 1)} />
+          <img src={imageParser(controlledSlide, 1)} />
         </div>
         <div className={`ContentWrapper Second ${contentWrapperHandler(1)}`}>
-          <img src={imageParser(slides, 2)} />
+          <img src={imageParser(controlledSlide, 2)} />
         </div>
         <div className={`ContentWrapper Third ${contentWrapperHandler(2)}`}>
-          <img src={imageParser(slides, 3)} />
+          <img src={imageParser(controlledSlide, 3)} />
         </div>
         <div className="Buttons">
           <div className="ArrowLeft">

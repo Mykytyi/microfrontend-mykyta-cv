@@ -22,8 +22,10 @@ const Portfolio = () => {
   useEffect(() => {
     if (slides) {
       document.body.style.overflow = "hidden"
+      document.body.style.touchAction = "none"
     } else {
       document.body.style.overflow = "auto"
+      document.body.style.touchAction = "auto"
     }
   }, [slides]);
 

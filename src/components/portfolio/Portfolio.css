@@ -3,7 +3,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100svh;
   -webkit-min-height: 100svh;
   -moz-min-height: 100svh;
   padding-top: 10rem;

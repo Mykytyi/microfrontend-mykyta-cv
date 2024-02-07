@@ -26,7 +26,7 @@ const Skills = () => {
             })}
           </h2>
           <p>
-            Since beginning my journey as a web developer nearly 5 years ago, I’ve done remote work for agencies,
+            Since beginning my journey as a web developer more than 5 years ago, I’ve done remote work for agencies,
             collaborated with talented people to create web products for both business and consumer use.
             <br/><br/>
             I create successful responsive websites that are fast, easy to use, and built with best practices. The main
@@ -64,10 +64,10 @@ const Skills = () => {
             </p>
           </div>
           <div className="Job JobTwo">
-            <h3>Frontend developer</h3>
+            <h3>Full stack developer</h3>
 
             <p className="CompanyName">A1</p>
-            <span>2021-2023</span>
+            <span>2021-2024</span>
 
             <p>
               A1 Telekom Austria Group is a provider of a range of fixed-line, broadband Internet, multimedia services,
