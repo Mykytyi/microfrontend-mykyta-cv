@@ -22,7 +22,7 @@ const Contact = () => {
             })}
           </h2>
           <p className="PLabels">
-            I’m interested in freelance opportunities - especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.
+            I am interested in full-time employment with ambitious and large projects. However, if you have other request or question, don’t hesitate to use the form.
           </p>
         </div>
         <ContactForm/>

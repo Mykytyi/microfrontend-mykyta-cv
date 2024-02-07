@@ -80,10 +80,10 @@ const Portfolio = () => {
               The site of the largest telecommunications company in Austria, providing a wide range of services, from mobile Internet to IT systems.
               <br/>
               <br/>
-              <strong>Tools and Technologies:</strong> JavaScript; Flow; Typescript; React; Redux; Node.js; Express; MySQL; Jenkins; Kubernetes.
+              <strong>Tools and Technologies:</strong> JavaScript; Typescript; React; Redux; Node.js; Express; MySQL; Oracle; Jenkins; Kubernetes; Docker; ArgoCD; Backstage;
               <br/>
               <br/>
-              <strong>Responsibilities:</strong> Development; design; creating new components for a personal React component library and maintaining them; participating in estimation meetings; full app support from DEV to PROD; CI/CD maintenance.
+              <strong>Responsibilities:</strong> Development; Constant communication with BA's, PO's; creating new components for a personal React component library and maintaining them; participating in estimation meetings; full app support from DEV to PROD; CI/CD maintenance.
             </p>
           </div>
         </div>
