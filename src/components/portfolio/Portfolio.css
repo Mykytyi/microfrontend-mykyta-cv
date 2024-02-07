@@ -3,7 +3,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100svh;
   -webkit-min-height: 100svh;
   -moz-min-height: 100svh;
   padding-top: 10rem;
@@ -119,107 +119,11 @@
   color: #515152;
 }
 
-.Portfolio .Project .Slides {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-}
-
-.Portfolio .Project .Slides .Wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60rem;
-  height: 30rem;
-}
-
-.Portfolio .Project .Slides .ImageWrapper {
-  display: inline-block;
-  position: relative;
-}
-
-.Portfolio .Project .Slides .ImageWrapper .Button {
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-  transform: translate(-50%, -50%) scale(0);
-  top: 50%;
-  left: 50%;
-  background-color: #2FB4FF;
-  font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-  border-radius: 5rem;
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  transition: all .2s ease-out;
-  cursor: pointer;
-}
-
-.Portfolio .Project .Slides .ImageWrapper:hover .Button {
-  /* TODO: return while "View more" buttons implementing transform: translate(-50%, -50%) scale(1); */
-}
-
-.Portfolio .Project .Slides .ImageWrapper img {
-  height: auto;
-  transition: all .2s linear;
-}
-
-.Portfolio .Project .Slides .ImageWrapper > img:hover {
-  /* TODO: return while "View more" buttons implementing filter: brightness(70%); */
-  transform: scale(1.1);
-}
-
-.Portfolio .Project .Slides .AdditionalImage {
-  display: inline-block;
-  position: absolute;
-  overflow: auto;
-  transition: all .2s linear;
-}
-
-.Portfolio .Project .Slides .ImageWrapper.MainPicture {
-  z-index: 5;
-}
-
-.Portfolio .Project .Slides .ImageWrapper .SecondPicture {
-  top: 10%;
-  left: -10rem;
-  z-index: -1;
-}
-
-.Portfolio .Project.A1Block .Slides .ImageWrapper .ThirdPicture {
-  top: 15%;
-}
-
-.Portfolio .Project .Slides .ImageWrapper .SecondPicture img {
-  width: 35rem;
-  filter: brightness(70%);
-}
-
-.Portfolio .Project .Slides .ImageWrapper .ThirdPicture {
-  top: 10%;
-  right: -10rem;
-  z-index: -1;
-}
-
-.Portfolio .Project .Slides .ImageWrapper .ThirdPicture img {
-  width: 35rem;
-  filter: brightness(70%);
-}
-
-.Portfolio .Project .Slides .ImageWrapper img {
-  width: 45rem;
-}
-
 @media screen and (max-width: 1300px) {
 
 }
 
 @media screen and (max-width: 1100px) {
-
-}
-
-@media screen and (max-width: 600px) {
   .Portfolio {
     padding-left: 10%;
     padding-right: 10%;
@@ -254,6 +158,10 @@
     margin-right: 0;
     order: 2;
   }
+}
+
+@media screen and (max-width: 600px) {
+
 }
 
 @media screen and (max-width: 380px) {

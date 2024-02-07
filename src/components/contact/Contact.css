@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: stretch;
   padding-left: 10%;
-  min-height: 100vh;
+  min-height: 100svh;
   -webkit-min-height: 100svh;
   -moz-min-height: 100vh;
 }
@@ -52,10 +52,18 @@
   background: rgba(3, 3, 3, 0.87);
   padding: 2rem 3rem;
   font-family: 'Karla', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
-.Contact .MapContainer .LocationDetails .Captcha{
+.Contact .MapContainer .LocationDetails p {
+  white-space: nowrap;
+}
+
+.Contact .MapContainer .LocationDetails p a {
+  color: #ffffff;
+}
+
+.Contact .MapContainer .LocationDetails .LabelWrapper {
   color: #2FB4FF;
 }
 
@@ -69,7 +77,12 @@
 }
 
 @media screen and (max-width: 1100px) {
-
+  .Contact {
+    margin-bottom: 5rem;
+  }
+  .Contact .MapContainer .LocationDetails {
+    top: 20vh;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -79,6 +92,7 @@
     align-items: center;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 0;
   }
   .Contact .FormContainer {
     width: auto;
@@ -90,6 +104,7 @@
   }
   .Contact .MapContainer .LocationDetails {
     top: 1vh;
+    font-size: 1.8rem;
   }
   .InputFieldContainer input, .InputFieldContainer input,
   .InputFieldContainer input, .InputFieldContainer textarea {
@@ -105,5 +120,11 @@
 }
 
 @media screen and (max-width: 380px) {
-
+  .Contact {
+    margin-bottom: 0;
+  }
+  .Contact .MapContainer .LocationDetails {
+    top: 1vh;
+    font-size: 1.8rem;
+  }
 }

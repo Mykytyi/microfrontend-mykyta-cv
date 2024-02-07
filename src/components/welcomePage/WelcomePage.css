@@ -3,7 +3,7 @@
   position: relative;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100svh;
   -webkit-min-height: 100svh;
   -moz-min-height: 100svh;
 }
@@ -79,6 +79,7 @@
   transition: all 0.5s;
   transform: translateY(20px);
   transition-delay: 0.7s;
+  white-space: nowrap;
 }
 
 .WelcomePage.AppearanceAnimation .Wrapper p.FrontendDeveloper {
@@ -178,15 +179,15 @@
 
 @keyframes scrollDownAnimation {
   0% {
-    transform: translateY(0) rotate(90deg);;
+    transform: translateY(0) rotate(90deg);
   }
 
   50% {
-    transform: translateY(-30px) rotate(90deg);;
+    transform: translateY(-30px) rotate(90deg);
   }
 
   100% {
-    transform: translateY(0) rotate(90deg);;
+    transform: translateY(0) rotate(90deg);
   }
 }
 
@@ -215,10 +216,9 @@
 }
 
 @media screen and (max-width: 380px) {
-  .WelcomePage .Wrapper h1 {
-
-  }
-  .WelcomePage .Wrapper .Char-logo {
-
+  .WelcomePage .Wrapper {
+    position: relative;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 }

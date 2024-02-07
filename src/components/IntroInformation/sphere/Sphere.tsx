@@ -5,9 +5,9 @@ import './Sphere.css';
 
 const labels = [
   'Node.js', 'Jenkins', 'HTML5', 'React',
-  'ES5/ES6', 'Atlassian', 'Babel', 'JS', 'CSS3',
-  'Animations', 'MongoDB', 'CI/CD', 'Git',
-  'SQL', 'REST API', 'Webpack', 'Typescript'];
+  'ES5/ES6', 'Atlassian', 'Babel', 'JS', 'CSS3', 'OOP',
+  'Animations', 'MongoDB', 'CI/CD', 'Git', 'Kubernetes',
+  'SQL', 'REST API', 'Webpack', 'Typescript', 'Docker'];
 
 const Sphere = React.memo(() => {
 
@@ -15,16 +15,16 @@ const Sphere = React.memo(() => {
 
   const handleSphereRadius = (size: number): number => {
     if (size > 1800) {
-      return 400;
+      return 450;
     }
     if (size > 1450) {
-      return 300;
+      return 350;
     }
     if (size > 1000) {
-      return 250;
+      return 300;
     }
-    if (size > 500) {
-      return 200;
+    if (size > 700) {
+      return 250;
     }
     return 200;
   };

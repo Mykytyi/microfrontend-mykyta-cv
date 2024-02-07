@@ -22,7 +22,7 @@ const Contact = () => {
             })}
           </h2>
           <p className="PLabels">
-            I’m interested in freelance opportunities - especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.
+            I am interested in full-time employment with ambitious and large projects. However, if you have other request or question, don’t hesitate to use the form.
           </p>
         </div>
         <ContactForm/>
@@ -40,7 +40,19 @@ const Contact = () => {
 
           <br/>
 
-          <p><span className="Captcha">@</span>: cherevaty.nik@gmail.com</p>
+          <p><span className="LabelWrapper">Mail</span>: cherevaty.nik@gmail.com</p>
+          <p><span className="LabelWrapper">Telegram</span>: <a href="https://t.me/mykyta_ch" target="_blank" rel="noopener noreferrer">@mykyta_ch</a></p>
+          <p>
+            <span className="LabelWrapper">Linkedin</span>
+            :{' '}
+            <a
+              href="https://www.linkedin.com/in/mykyta-cherevatyi-b17b48182"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              mykyta-cherevatyi
+            </a>
+          </p>
         </div>
         <div className="Wrapper">
           <img alt="Map" src={Map}/>

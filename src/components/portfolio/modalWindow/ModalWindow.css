@@ -1,0 +1,503 @@
+.Portfolio .ModalWindow {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease-out;
+}
+
+.Portfolio .ModalWindow.Shown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.Portfolio .ModalWindow .ModalContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200rem;
+  height: 100rem;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -8rem;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  transform: translate(0, -50%) scale(.9);
+  filter: brightness(90%);
+  transition: all .3s ease-out;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft:hover {
+  transform: translate(0, -50%) scale(1);
+  filter: brightness(100%);
+}
+
+.Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft:active {
+  transform: translate(0, -50%) scale(.9);
+}
+
+.Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -8rem;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  transform: translate(0, -50%) scale(.9) rotate(180deg);
+  filter: brightness(90%);
+  transition: all .3s ease-out;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight:hover {
+  transform: translate(0, -50%) scale(1) rotate(180deg);
+  filter: brightness(100%);
+}
+
+.Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight:active {
+  transform: translate(0, -50%) scale(.9) rotate(180deg);
+}
+
+.Portfolio .ModalWindow .ModalContent .CloseButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -5rem;
+  top: -4rem;
+  filter: brightness(90%);
+  transform: scale(.9);
+  transition: all .3s ease-out;
+  cursor: pointer;
+}
+
+.Portfolio .ModalWindow .ModalContent .CloseButton:hover {
+  filter: brightness(100%);
+  transform: scale(1);
+}
+
+.Portfolio .ModalWindow .ModalContent .CloseButton:active {
+  transform: scale(.9);
+}
+
+.Portfolio .ModalWindow .ModalContent .ContentWrapper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-out;
+}
+
+.Portfolio .ModalWindow .ModalContent .ContentWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.Portfolio .ModalWindow .ModalContent .ContentWrapper.First {
+  z-index: 5;
+  left: 0;
+  transform: scale(1);
+  box-shadow: #0081FB 0 0 15px 3px;
+}
+.Portfolio .ModalWindow .ModalContent .ContentWrapper.Second {
+  z-index: 3;
+  left: 25rem;
+  transform: scale(0.8);
+  box-shadow: unset;
+}
+.Portfolio .ModalWindow .ModalContent .ContentWrapper.Third {
+  z-index: 3;
+  left: -30rem;
+  transform: scale(0.8);
+  box-shadow: unset;
+}
+
+.AnimationOneTwo {
+  animation: fromOneToTwo 1s linear forwards;
+}
+
+.AnimationTwoThree {
+  animation: fromTwoToThree 1s linear forwards;
+}
+
+.AnimationThreeOne {
+  animation: fromThreeToOne 1s linear forwards;
+}
+
+.AnimationOneThree {
+  animation: fromOneToThree 1s linear forwards;
+}
+
+.AnimationThreeTwo {
+  animation: fromThreeToTwo 1s linear forwards;
+}
+
+.AnimationTwoOne {
+  animation: fromTwoToOne 1s linear forwards;
+}
+
+@keyframes fromOneToTwo {
+  0% {
+    box-shadow: #0081FB 0 0 15px 3px;
+    z-index: 5;
+    left: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: #0081FB 0 0 7px 2px;
+    z-index: 4;
+    left: 12.5rem;
+    transform: scale(0.9);
+  }
+
+  100% {
+    box-shadow: unset;
+    z-index: 3;
+    left: 25rem;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes fromTwoToThree {
+  0% {
+    z-index: 3;
+    left: 25rem;
+    transform: scale(0.8);
+    box-shadow: unset;
+  }
+
+  100% {
+    z-index: 3;
+    left: -30rem;
+    transform: scale(0.8);
+    box-shadow: unset;
+  }
+}
+
+@keyframes fromThreeToOne {
+  0% {
+    box-shadow: unset;
+    z-index: 3;
+    left: -30rem;
+    transform: scale(0.8);
+  }
+
+  50% {
+    box-shadow: #0081FB 0 0 7px 2px;
+    z-index: 4;
+    left: -15rem;
+    transform: scale(0.9);
+  }
+
+  100% {
+    box-shadow: #0081FB 0 0 15px 3px;
+    left: 0;
+    z-index: 5;
+    transform: scale(1);
+  }
+}
+
+@keyframes fromOneToThree {
+  0% {
+    z-index: 5;
+    left: 0;
+    transform: scale(1);
+    box-shadow: #0081FB 0 0 15px 3px;
+  }
+
+  50% {
+    z-index: 4;
+    left: -15rem;
+    transform: scale(0.9);
+    box-shadow: #0081FB 0 0 7px 2px;
+  }
+
+  100% {
+    z-index: 3;
+    left: -30rem;
+    transform: scale(0.8);
+    box-shadow: unset;
+  }
+}
+
+@keyframes fromThreeToTwo {
+  0% {
+    z-index: 3;
+    left: -30rem;
+    transform: scale(0.8);
+    box-shadow: unset;
+  }
+
+  50% {
+    z-index: 3;
+    left: -2.5rem;
+    transform: scale(0.8);
+    box-shadow: unset;
+  }
+
+  100% {
+    z-index: 3;
+    left: 25rem;
+    transform: scale(0.8);
+    box-shadow: unset;
+  }
+}
+
+@keyframes fromTwoToOne {
+  0% {
+    z-index: 3;
+    left: 25rem;
+    transform: scale(0.8);
+    box-shadow: unset;
+  }
+
+  50% {
+    z-index: 4;
+    left: 12.5rem;
+    transform: scale(0.9);
+    box-shadow: #0081FB 0 0 7px 2px;
+  }
+
+  100% {
+    z-index: 5;
+    left: 0;
+    transform: scale(1);
+    box-shadow: #0081FB 0 0 15px 3px;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 130rem;
+    height: 75rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 90%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 110rem;
+    height: 55rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 85%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 100rem;
+    height: 50rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 75%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 75%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -4rem;
+    top: -3rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 80rem;
+    height: 40rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -6rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 75%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 75%;
+  }
+
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -4rem;
+    top: -3rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 60rem;
+    height: 30rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -5rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -5rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 60%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 60%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -4rem;
+    top: -3rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 60rem;
+    height: 30rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -7rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -7rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 50%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 50%;
+  }
+
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -5rem;
+    top: -4rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Portfolio .ModalWindow .ModalContent {
+    width: 50rem;
+    height: 25rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft {
+    left: -7rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight {
+    right: -7rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowLeft img {
+    width: 40%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .Buttons .ArrowRight img {
+    width: 40%;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton {
+    right: -4rem;
+    top: -3rem;
+  }
+
+  .Portfolio .ModalWindow .ModalContent .CloseButton img {
+    width: 60%;
+  }
+}

@@ -1,32 +1,37 @@
 import { useEffect, useState } from 'react';
 import CharacterWrapper from '../welcomePage/characterWrapper/CharacterWrapper';
+import Slides from './slides/Slides';
+import ModalWindow from './modalWindow/ModalWindow';
 import { animationListener } from '../../helpers/animations';
 
 import LendironLogo from '../../pics/Lendiron/LendironLogo.png';
-import MainBoat from '../../pics/Lendiron/MainBoat.jpg';
-import Graphs from '../../pics/Lendiron/Graphs.jpg';
-import BoatAndSensors from '../../pics/Lendiron/Boat&Sensors.jpg';
-
 import A1Logo from '../../pics/A1/A1Logo.png';
-import A1Site from '../../pics/A1/A1Site.png';
-import Portal from '../../pics/A1/Portal.png';
-import Storybook from '../../pics/A1/Storybook.png';
-
 import GoodlikeLogo from '../../pics/Goodlike/GoodLikeLogo.svg';
-import GoodLikeLanding from '../../pics/Goodlike/GoodLikeLanding.png';
-import AdminPanelOne from '../../pics/Goodlike/AdminPanelOne.png';
-import AdminPanelTwo from '../../pics/Goodlike/AdminPanelTwo.png';
+
+import { ISlides } from '../../type-definitions';
 
 import './Portfolio.css';
 
 const Portfolio = () => {
   const [animated, setAnimated] = useState(false);
+  const [slides, setSlides] = useState<ISlides>(null);
   const introText = 'My Portfolio'.split('');
 
   useEffect(animationListener(setAnimated, 'Portfolio'), [animated]);
 
+  useEffect(() => {
+    if (slides) {
+      document.body.style.overflow = "hidden"
+      document.body.style.touchAction = "none"
+    } else {
+      document.body.style.overflow = "auto"
+      document.body.style.touchAction = "auto"
+    }
+  }, [slides]);
+
   return (
     <div className="Portfolio" id="Portfolio">
+      <ModalWindow slides={slides} setSlides={setSlides} />
       <div className="TextBlock">
         <h2 className="H2Lables">
           {introText.map((char, index) => {
@@ -56,44 +61,14 @@ const Portfolio = () => {
         </div>
 
         <div className="Slides">
-          <div className="Wrapper">
-            <span className="ImageWrapper MainPicture">
-
-              <img alt="Picture of a site with 3d model of a boat" src={MainBoat}/>
-
-              <button className="Button ViewMoreButton">View<br/>more</button>
-
-              <span className="AdditionalImage SecondPicture">
-                <img alt="Graphs" src={Graphs}/>
-              </span>
-              <span className="AdditionalImage ThirdPicture">
-                <img alt="Boat and sensors" src={BoatAndSensors}/>
-              </span>
-
-            </span>
-          </div>
+          <Slides setSlides={setSlides} slides={slides} typeOfSlides="Yacht" />
         </div>
 
       </div>
 
       <div className="Project A1Block">
         <div className="Slides">
-          <div className="Wrapper">
-            <span className="ImageWrapper MainPicture">
-
-              <img alt="The site of the A1 company" src={A1Site}/>
-
-              <button className="Button ViewMoreButton">View<br/>more</button>
-
-              <span className="AdditionalImage SecondPicture">
-                <img alt="List of applications" src={Portal}/>
-              </span>
-              <span className="AdditionalImage ThirdPicture">
-                <img alt="Site with a react component library" src={Storybook}/>
-              </span>
-
-            </span>
-          </div>
+          <Slides setSlides={setSlides} slides={slides} typeOfSlides="A1" />
         </div>
 
         <div className="ProjectDescription">
@@ -105,10 +80,10 @@ const Portfolio = () => {
               The site of the largest telecommunications company in Austria, providing a wide range of services, from mobile Internet to IT systems.
               <br/>
               <br/>
-              <strong>Tools and Technologies:</strong> JavaScript; Flow; Typescript; React; Redux; Node.js; Express; MySQL; Jenkins; Kubernetes.
+              <strong>Tools and Technologies:</strong> JavaScript; Typescript; React; Redux; Node.js; Express; MySQL; Oracle; Jenkins; Kubernetes; Docker; ArgoCD; Backstage;
               <br/>
               <br/>
-              <strong>Responsibilities:</strong> Development; design; creating new components for a personal React component library and maintaining them; participating in estimation meetings; full app support from DEV to PROD; CI/CD maintenance.
+              <strong>Responsibilities:</strong> Development; Constant communication with BA's, PO's; creating new components for a personal React component library and maintaining them; participating in estimation meetings; full app support from DEV to PROD; CI/CD maintenance.
             </p>
           </div>
         </div>
@@ -131,22 +106,7 @@ const Portfolio = () => {
         </div>
 
         <div className="Slides">
-          <div className="Wrapper">
-            <span className="ImageWrapper MainPicture">
-
-              <img alt="Landing page of a hosting site" src={GoodLikeLanding}/>
-
-              <button className="Button ViewMoreButton">View<br/>more</button>
-
-              <span className="AdditionalImage SecondPicture">
-                <img alt="Picture of an admin panel on the hosting site" src={AdminPanelOne}/>
-              </span>
-              <span className="AdditionalImage ThirdPicture">
-                <img alt="Second picture of an admin panel on the hosting site" src={AdminPanelTwo}/>
-              </span>
-
-            </span>
-          </div>
+          <Slides setSlides={setSlides} slides={slides} typeOfSlides="Godlike" />
         </div>
       </div>
     </div>
