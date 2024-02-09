@@ -6,9 +6,10 @@ interface Props {
   bar: 'RJ' | 'NJ' | 'FE' | 'BE',
   progress: number,
   color: string,
+  experience?: number,
 }
 
-const SkillBar: React.FC<Props> = ({bar, progress, color}) => {
+const SkillBar: React.FC<Props> = ({bar, progress, color, experience}) => {
 
   const skillBarClassParser = (prop: 'RJ' | 'NJ' | 'FE' | 'BE') => {
     if (prop === 'RJ') {
@@ -27,7 +28,7 @@ const SkillBar: React.FC<Props> = ({bar, progress, color}) => {
 
   return (
     <li className="SkillBarsItem">
-      <p className="SkillBarName">{skillBarClassParser(bar)}</p>
+      <p className="SkillBarName">{skillBarClassParser(bar)}{experience ? (<span className="ExperienceDetail">&nbsp;({experience} years of commercial experience)</span>) : ''}</p>
       <div className="SkillBar">
         <span className="Fill" style={{width: `${progress}%`, backgroundColor: `${color}`}}/>
       </div>

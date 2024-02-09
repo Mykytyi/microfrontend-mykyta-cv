@@ -44,10 +44,10 @@ const Skills = () => {
       <div className="SkillsDetails">
         <div className="SkillBars">
           <ul className="SkillBarsList">
-            <SkillBar bar="FE" progress={85} color="#2FB4FF"/>
-            <SkillBar bar="RJ" progress={80} color="#BBF80D"/>
-            <SkillBar bar="NJ" progress={60} color="#18F0BC"/>
-            <SkillBar bar="BE" progress={70} color="#F018C0"/>
+            <SkillBar bar="FE" progress={95} color="#2FB4FF"/>
+            <SkillBar bar="RJ" progress={90} color="#BBF80D" experience={5}/>
+            <SkillBar bar="BE" progress={85} color="#F018C0"/>
+            <SkillBar bar="NJ" progress={80} color="#18F0BC" experience={2}/>
           </ul>
         </div>
 
