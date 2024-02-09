@@ -33,7 +33,7 @@ const WelcomePage = () => {
         <p className="FrontendDeveloper">
           Front End developer / React expert
         </p>
-        <button className="Button"><a href="#contactMe2">Contact me!</a></button>
+        <button className="Button"><a href="#contactMe">Contact me!</a></button>
       </div>
 
       <div className="AdditionalElements">
