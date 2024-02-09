@@ -129,6 +129,10 @@
   transform: translateY(0);
 }
 
+.WelcomePage .Wrapper .Button:active a {
+  filter: brightness(80%);
+}
+
 .WelcomePage .Wrapper .Button a {
   display: inline-block;
   width: 100%;
