@@ -9,6 +9,14 @@
   font-weight: bold;
 }
 
+.SkillBarsItem .SkillBarName .ExperienceDetail {
+  font-size: 1.6rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  color: #ABABAB;
+}
+
 .SkillBarsItem .SkillBar {
   position: relative;
   width: 100%;
