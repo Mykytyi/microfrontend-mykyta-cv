@@ -4,9 +4,9 @@ import TagCloud from 'TagCloud';
 import './Sphere.css';
 
 const labels = [
-  'Node.js', 'Jenkins', 'HTML5', 'React',
-  'ES5/ES6', 'Atlassian', 'Babel', 'JS', 'CSS3', 'OOP',
-  'Animations', 'MongoDB', 'CI/CD', 'Git', 'Kubernetes',
+  'Node.js', 'Jenkins', 'YAGNI', 'React',
+  'ES5/ES6', 'Atlassian', 'KISS', 'JavaScript', 'OOP',
+  'Animations', 'MongoDB', 'DRY', 'Git', 'Kubernetes',
   'SQL', 'REST API', 'Webpack', 'Typescript', 'Docker'];
 
 const Sphere = React.memo(() => {
