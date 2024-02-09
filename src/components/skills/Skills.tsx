@@ -35,7 +35,7 @@ const Skills = () => {
             <br/><br/>
             I also have full-stack developer experience with popular open-source server environment Node.js
             <br/><br/>
-            Visit my <a href="https://www.linkedin.com/in/mykyto-cherevatyi-b17b48182/" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile for more
+            Visit my <a href="https://www.linkedin.com/in/mykyto-cherevatyi-b17b48182" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile for more
             details or just <a href="#contactMe">contact</a> me.
           </p>
         </div>
