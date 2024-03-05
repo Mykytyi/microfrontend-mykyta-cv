@@ -49,4 +49,3 @@ export const imageParser = (slides: ISlides, priority: 1 | 2 | 3) => {
       break;
   }
 };
-

@@ -29,14 +29,11 @@ const Skills = () => {
             Since beginning my journey as a web developer more than 5 years ago, I’ve done remote work for agencies,
             collaborated with talented people to create web products for both business and consumer use.
             <br/><br/>
-            I create successful responsive websites that are fast, easy to use, and built with best practices. The main
-            area of my expertise is front-end development, React, JS, HTML, CSS, building small and medium web apps,
-            complex logic, custom plugins, features and animations.
+            I create successful responsive websites and services that are fast, easy to use, and are built with best practices.
             <br/><br/>
-            I also have full-stack developer experience with popular open-source server environment Node.js
-            <br/><br/>
-            Visit my <a href="https://www.linkedin.com/in/mykyta-cherevatyi-b17b48182" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile for more
-            details or just <a href="#contactMe">contact</a> me.
+            For more information you can check my <a href="CV_MykytaCH.pdf" target="_blank" rel="noopener noreferrer">CV</a>, visit
+            my <a href="https://www.linkedin.com/in/mykyta-cherevatyi-b17b48182" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile
+            or just <a href="#contactMe">contact</a> me.
           </p>
         </div>
       </div>
@@ -47,7 +44,7 @@ const Skills = () => {
             <SkillBar bar="FE" progress={95} color="#2FB4FF"/>
             <SkillBar bar="RJ" progress={90} color="#BBF80D" experience={5}/>
             <SkillBar bar="BE" progress={85} color="#F018C0"/>
-            <SkillBar bar="NJ" progress={80} color="#18F0BC" experience={2}/>
+            <SkillBar bar="NJ" progress={80} color="#18F0BC" experience={3}/>
           </ul>
         </div>
 

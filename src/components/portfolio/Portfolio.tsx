@@ -55,7 +55,7 @@ const Portfolio = () => {
               <br/><br/>
               <strong>Tools and Technologies:</strong> JavaScript, Typescript, React, Redux, Node.js, Express, MongoDB.
               <br/><br/>
-              <strong>Responsibilities:</strong> Developed admin and client sides; design; implemented graphs; flexible tables; forms with validators etc.
+              <strong>Responsibilities:</strong> Developed admin and client sides(BE & FE parts); API from scratch; design; implemented graphs; flexible tables; forms with validators etc.
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ const Portfolio = () => {
               <strong>Tools and Technologies:</strong> JavaScript; Typescript; React; Redux; Node.js; Express; MySQL; Oracle; Jenkins; Kubernetes; Docker; ArgoCD; Backstage;
               <br/>
               <br/>
-              <strong>Responsibilities:</strong> Development; Constant communication with BA's, PO's; creating new components for a personal React component library and maintaining them; participating in estimation meetings; full app support from DEV to PROD; CI/CD maintenance.
+              <strong>Responsibilities:</strong> Development(BE & FE parts); API from scratch; Constant communication with BA's, PO's; creating new components for a personal React component library and maintaining them; participating in estimation meetings; full app support from DEV to PROD; CI/CD maintenance.
             </p>
           </div>
         </div>
