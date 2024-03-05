@@ -31,7 +31,7 @@ const WelcomePage = () => {
           })}
         </h1>
         <p className="FrontendDeveloper">
-          Front End developer / React expert
+          Full Stack Developer / React & Node.js expert
         </p>
         <button className="Button"><a href="#contactMe">Contact me!</a></button>
       </div>

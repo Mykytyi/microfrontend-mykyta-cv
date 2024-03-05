@@ -33,8 +33,6 @@ const Contact = () => {
           <p>
             Mykyta Cherevatyi,
             <br/>
-            St. Progresyvna 3,
-            <br/>
             Dnirpo 49098, Ukraine
           </p>
 
@@ -53,6 +51,7 @@ const Contact = () => {
               mykyta-cherevatyi
             </a>
           </p>
+          <p><span className="LabelWrapper">CV</span>: <a href="CV_MykytaCH.pdf" target="_blank" rel="noopener noreferrer">link</a></p>
         </div>
         <div className="Wrapper">
           <img alt="Map" src={Map}/>
