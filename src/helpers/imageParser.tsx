@@ -49,15 +49,3 @@ export const imageParser = (slides: ISlides, priority: 1 | 2 | 3) => {
       break;
   }
 };
-
-abstract class Auto {
-  readonly name: string;
-  readonly model: string;
-  year: number;q
-
-  abstract getAutoType(): string;
-
-  getAutoModel(): string {
-    return this.model;
-  }
-}
