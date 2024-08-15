@@ -28,7 +28,7 @@ const Slides: FC<Props> = ({
           } else {
             setSlides(typeOfSlides)
           }
-        }}>View<br/>more</button>
+        }}><span>View<br/>more</span></button>
 
         <span className="AdditionalImage SecondPicture">
           <img src={imageParser(typeOfSlides, 2)}/>

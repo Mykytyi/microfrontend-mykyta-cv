@@ -79,7 +79,6 @@
   transition: all 0.5s;
   transform: translateY(20px);
   transition-delay: 0.7s;
-  white-space: nowrap;
 }
 
 .WelcomePage.AppearanceAnimation .Wrapper p.FrontendDeveloper {
